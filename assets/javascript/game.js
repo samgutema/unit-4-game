@@ -61,7 +61,7 @@ $(function(){
 
 
 
-    magicNumber = (Math.floor(Math.random() * 101) + 19)
+    magicNumber = (Math.floor(Math.random() * 101) + 19);
     $("#magic-number").click(function() {
 
             $("#magic-number").replaceWith(magicNumber)
@@ -71,13 +71,18 @@ $(function(){
          
     })
 
-    //  for ( i=0; i < firstImage.length; i++){
-    //    firstName[i] = Math.floor(Math.random() ) ;
-    // $("#image1, #image2, #image3, #image4").click(function(){
+       for ( i=0; i < firstImage.length; i++){
+       firstImage[i] = Math.floor(Math.random() ) ;
+    $("#image1, #image2, #image3, #image4").click(function(){
 
-    //     $("#user-total-score").replaceWith(firstImage[i])
+        $("#user-total-score").replaceWith(firstImage)
 
-    // })
+    })
+}
+
+});
+
+  
 
 
 
@@ -98,7 +103,7 @@ $(function(){
 
 
 
-})
+
 
 
 
