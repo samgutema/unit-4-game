@@ -1,0 +1,28 @@
+#image1 {
+    width: 200px;
+    height: 200px;
+}
+
+#image2 {
+    width: 200px;
+    height: 200px;
+}
+
+#image3 {
+    width: 200px;
+    height: 200px;
+}
+
+#image4 {
+    width: 200px;
+    height: 200px;
+}
+
+.magic-header {
+    text-align : center;
+    background: red;
+}
+
+#wmlheader{
+    margin: auto;
+}
