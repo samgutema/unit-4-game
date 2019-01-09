@@ -45,7 +45,6 @@
 
 // document.getElementById("#magic-number")
 //generate random number at start of game and assign it to magic number #magic-number 19-120
-
 var newGame = true
 var magicNumber = []
 var userNumber = []
@@ -56,7 +55,12 @@ var secondImage = []
 var thirdImage = []
 var fourthImage = []
 
+
 $(function(){
+
+
+
+
     magicNumber = (Math.floor(Math.random() * 101) + 19)
     $("#magic-number").click(function() {
 
@@ -66,14 +70,15 @@ $(function(){
 
          
     })
-     for ( i=0; i < firstImage.length; i++){
-       i = Math.floor(Math.random() ) ;
-    $("#image1, #image2, #image3, #image4").click(function(){
 
-        $("#user-total-score").replaceWith(i)
+    //  for ( i=0; i < firstImage.length; i++){
+    //    firstName[i] = Math.floor(Math.random() ) ;
+    // $("#image1, #image2, #image3, #image4").click(function(){
 
-    })
-}
+    //     $("#user-total-score").replaceWith(firstImage[i])
+
+    // })
+
 
 
 
