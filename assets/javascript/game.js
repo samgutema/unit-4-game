@@ -47,53 +47,90 @@
 //generate random number at start of game and assign it to magic number #magic-number 19-120
 
 
-$(document).ready(function() {
-var newGame = true
-var magicNumber = ""
-var userNumber = ""
-var win = 0;
-var lose = 0; 
-var firstImage = [1, 2,3,4,5,6,7,8,9,10,11,12]
-var secondImage = []
-var thirdImage = []
-var fourthImage = []
+$(document).ready(function () {
+    var newGame = true
+    var magicNumber = ""
+    var userNumber = ""
+    var win = 0;
+    var lose = 0;
+    var firstImage = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    var secondImage = []
+    var thirdImage = []
+    var fourthImage = []
 
 
- function initializeGame (){
-     win = 0;
-     lose = 0;
-     magicNumber = "";
-     userNumber = ""
-     firstImage = "";
-     secondImage= ""; 
-     thirdImage = "";
-     fourthImage = "";
+    function initializeGame() {
+        win = 0;
+        lose = 0;
+        magicNumber = "";
+        userNumber = ""
+        firstImage = "";
+        secondImage = "";
+        thirdImage = "";
+        fourthImage = "";
 
-     $("#image1, #image2, #image3, #image4, #win, #lose, #magic-number, #user-total-score").empty();
-    
-
- }
-
-
-
-
- $("#image1, #image2, #image3, #image4").on("click", function() {
-
-    for ( i=0; i < firstImage.length; i++){
-        firstImage[i] = Math.floor(Math.random()* 11)+1 ;
-    }
- 
-    
-    if (firstImage){
-
-        firstImage + $(this).val(); 
-
-        $("#user-total-score").text(firstImage[i] = Math.floor(Math.random()* 11)+1 + (i++))
+        $("#image1, #image2, #image3, #image4, #win, #lose, #magic-number, #user-total-score").empty();
 
 
     }
 
-    // $("#user-total-score") = 
+
+    $(function () {
+        magicNumber = (Math.floor(Math.random() * 101) + 19);
+        if (magicNumber) {
+
+            magicNumber += $(this).val();
+            $("#magic-number").html(magicNumber = (Math.floor(Math.random() * 101) + 19))
+
+        }
+
+        magicNumber = (magicNumber).attr("#magic-number")
+        magicNumber = parseInt(magicNumber)
+
+    })
+
+
+
+    $("#image1, #image2, #image3, #image4").on("click", function () {
+
+        for (i = 0; i < firstImage.length; i++) {
+            firstImage[i] = Math.floor(Math.random() * 11) + 1;
+
+            
+        }
+
+
+        if (firstImage) {
+
+            firstImage + $(this).val();
+
+            $("#user-total-score").text(firstImage[i] = Math.floor(Math.random() * 11) + 1 + (i++))
+            firstImage == userNumber
+
+            
+
+        }
+
+
+        userNumber = (firstImage).attr("#user-total-score")
+        userNumber = parseInt(userNumber);
+
+
+   
+
+        if (("#user-total-score").text() > ("magicNumber").text()) {
+
+            $("#lose").text(lose++)
+
+            alert("user loses")
+
+
+
+
+        }
+
+
+    });
 
 
 
@@ -103,26 +140,38 @@ var fourthImage = []
 
 
 
- });
 
 
 
 
 
-//  $("#magic-number").on("click", function() {
-    magicNumber = (Math.floor(Math.random() * 101) + 19);
-    if (magicNumber) {
-
-        magicNumber += $(this).val();
-        $("#magic-number").html(magicNumber = (Math.floor(Math.random() * 101) + 19))
-
-    }
 
 
 
 
 
-//  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+})
+
+ //  })
     // magicNumber = (Math.floor(Math.random() * 101) + 19);
 
 
@@ -134,16 +183,13 @@ var fourthImage = []
 
     //    $(magicNumber = (Math.floor(Math.random() * 101) + 19));
 
-         
-    })
-
     //1
-    
+
     //    for ( i=0; i < firstImage.length; i++){
     //    firstImage[i] = Math.floor(Math.random()* 11)+1 ;
 
-       
-    
+
+
 
     // $("#image1, #image2, #image3, #image4").click( function(){
 
@@ -154,8 +200,8 @@ var fourthImage = []
 
     //2
 
-  
-    
+
+
 
 
 //})
