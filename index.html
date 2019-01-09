@@ -17,79 +17,80 @@
 
 <body>
 
-</body>
 
-<div class="container">
-<div class="jumbotron">
-    <h1 class="text-center"> Crystal Collector</h1>
-    <h2 class="text-center"> Press the crystals in order to generate random number to match the Magic Number without
-        going over!</h2>
-</div>
-
-<div class="row" id = "wmlheader">
-
-    <section class="win col-md-3  ">
-        <div class="win-header text-center"> 
-            <h3 id=win> Win : 0 </h3>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center"> Crystal Collector</h1>
+            <h2 class="text-center"> Press the crystals in order to generate random number to match the Magic Number without going over!</h2>
         </div>
-    </section>
-    <section class="magic col-md-6">
-        <div class="magic-header text-center"> 
-            <h3>Magic Number </h3>
+
+        <div class="row" id="wmlheader">
+
+            <section class="win col-md-3  ">
+                <div class="win-header text-center">
+                    <h3 id=win> Win : 0 </h3>
+                </div>
+            </section>
+            <section class="magic col-md-6">
+                <div class="magic-header text-center">
+                    <h3>Magic Number </h3>
+                </div>
+            </section>
+            <section class="lose col-md-3">
+                <div class="lose-header text-center">
+                    <h3 id=lose>Lose : 0</h3>
+                </div>
+            </section>
+
         </div>
-    </section>
-    <section class="lose col-md-3">
-         <div class="lose-header text-center"> 
-             <h3 id=lose>Lose : 0</h3> 
-        </div>
-    </section>
 
-</div>
-
-<br>
-<div class="row">
-
-    <section class="magic-body text-center col-md-12">
-        <h1 id="magic-number-pick">???</h1>
-    </section>
-</div>
-
-
-<br>
-
-<div class="row">
-    <section class=" col-md-3">
-        <img id="image1" src="assets/images/crystal1.jpg" alt="crystal 1">
-    </section>
-    <section class=" col-md-3">
-        <img id="image2" src="assets/images/crystal2.jpg" alt="crystal 2">
-    </section>
-    <section class=" col-md-3">
-        <img id="image3" src="assets/images/crystal3.jpg" alt="crystal 2">
-    </section>
-    <section class=" col-md-3">
-        <img id="image4" src="assets/images/crystal4.jpg" alt="crystal 2">
-    </section>
-
-</div>
-
-<br>
-
-<div class="row">
-    <div class="col-md-12">
-        <h3 class="magic-header text-center"> User Number </h3>
         <br>
-        <div class="magic-body text-center">
-            <h1 id="magic-number-pick">???</h1>
+        <div class="row">
+
+            <section class="magic-body text-center col-md-12">
+                <h1 id="magic-number">???</h1>
+            </section>
         </div>
+
+
+        <br>
+
+        <div class="row">
+            <section class=" col-md-3">
+                <img id="image1" src="assets/images/crystal1.jpg" alt="crystal 1">
+            </section>
+            <section class=" col-md-3">
+                <img id="image2" src="assets/images/crystal2.jpg" alt="crystal 2">
+            </section>
+            <section class=" col-md-3">
+                <img id="image3" src="assets/images/crystal3.jpg" alt="crystal 2">
+            </section>
+            <section class=" col-md-3">
+                <img id="image4" src="assets/images/crystal4.jpg" alt="crystal 2">
+            </section>
+
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="magic-header text-center"> User Number </h3>
+                <br>
+                <div class="magic-body text-center">
+                    <h1 id="user-total-score">???</h1>
+                </div>
+            </div>
+        </div>
+        <br>
+
+
     </div>
-</div>
-<br>
 
-
-</div>
+    <script src="assets/javascript/game.js"></script>
 
 
 
+</body>
 
 </html>

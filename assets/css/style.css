@@ -19,10 +19,13 @@
 }
 
 .magic-header {
-    text-align : center;
     background: red;
 }
 
-#wmlheader{
-    margin: auto;
+.container {
+    background: rgb(93, 93, 139);
+}
+
+body{
+    background: black;
 }
