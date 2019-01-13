@@ -80,13 +80,13 @@ var magicNumber = 0
     // $("#magic-number").html(magicNumber = (Math.floor(Math.random() * 101) + 19))
 
     $(function () {
-       magicNumber = (Math.floor(Math.random() * 18) + 1);
+       magicNumber = (Math.floor(Math.random() * 101) + 19);
         
             $("#magic-number").text(magicNumber);
 
 
 
-
+        magicNumber = parseInt(magicNumber)
             
 
     })
@@ -151,33 +151,31 @@ $(function () {
 
         if (firstImage) {
 
-            firstImage + $(this).val();
 
-            $("#user-total-score").text(firstImage[i] = Math.floor(Math.random() * 11) + 1 + (i++))
+            $("#user-total-score").text(firstImage[i] = Math.floor(Math.random() * 11) + 1 + i++)
 
-            var userNumber;
-            userNumber = firstImage
-            // userNumber = parseInt(userNumber)
-            counter += firstImage
-            
+             var userNumber;
+             userNumber =  $(this)
+             userNumber = parseInt(userNumber)
+            counter += userNumber
 
         }
 
-
-        if (userNumber === magicNumber) {
+        if (counter === magicNumber) {
 
             $("#win").text(win++)
         }
-
-        else if (userNumber >= magicNumber)  {
+    
+        else if (counter >= magicNumber)  {
             $("#lose").text(lose++)
         }
+    
+   
     });
 
 
 
-
-
+  
 
 
 
