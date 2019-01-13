@@ -20,6 +20,8 @@
 
 .magic-header {
     background: red;
+        border : 100px;
+        border-color : black;
 }
 
 .container {
