@@ -1,4 +1,4 @@
-#image1 {
+/* #image1 {
     width: 200px;
     height: 200px;
 }
@@ -16,7 +16,7 @@
 #image4 {
     width: 200px;
     height: 200px;
-}
+} */
 
 .magic-header {
     background: red;
@@ -30,4 +30,17 @@
 
 body{
     background: black;
+}
+
+.crystal {
+    border: 1px solid green;
+    height: 200px;
+    width : 200px;
+}
+.crystals {
+    display: flex;
+    justify-content: space-around;
+   
+    align-items: center;
+
 }

@@ -1,26 +1,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //generate random number at start of game and assign it to magic number #magic-number
 //generate hidden crystal numbers 1-12 for each image 
 //increment user total score everytime user clicks crystal image
@@ -33,169 +13,88 @@
 
 
 
+//var random_result; 
+var magicMum;
+var lost = 0;
+var win = 0;
+
+// var previous=0 
+var userNum=0
+
+
+var startGame = function () {
+
+    $(".crystals").empty()
+
+    var images = [
+        "assets/images/crystal1.jpg",
+        "assets/images/crystal2.jpg",
+        "assets/images/crystal3.jpg",
+        "assets/images/crystal4.jpg"
+    ]
 
 
 
 
 
 
+    magicMum = Math.floor(Math.random() * 109) + 19;
+$("#magic-number").html(magicMum)
+    
+for (var i = 0; i < 4; i++ ){
+    var random = Math.floor(Math.random() *11) +1;
 
-
-
-
-// document.getElementById("#magic-number")
-//generate random number at start of game and assign it to magic number #magic-number 19-120
-
-
-$(document).ready(function () {
-    // var newGame = true
-    // var magicNumber = ""
-    // var userNumber = ""
-    var win = 0;
-    var lose = 0;
-    var firstImage = [8, 10, 11, 12]
-    var counter = 0
-    var userValue1;
-    var userValue2;
-    var userValue3;
-    var userValue4;
-
-
-    // function initializeGame() {
-    //     win = 0;
-    //     lose = 0;
-    //     magicNumber = "";
-    //     userNumber = ""
-    //     firstImage = "";
-    //     secondImage = "";
-    //     thirdImage = "";
-    //     fourthImage = "";
-
-    //     $("#win, #lose, #magic-number, #user-total-score").empty();
-
-
-    // }
-var magicNumber = 0
-
-    // $("#magic-number").html(magicNumber = (Math.floor(Math.random() * 101) + 19))
-
-    $(function () {
-       magicNumber = (Math.floor(Math.random() * 101) + 19);
-        
-            $("#magic-number").text(magicNumber);
-
-
-
-        magicNumber = parseInt(magicNumber)
-            
-
+    var crystal = $("<div>"); 
+    crystal.attr({
+        "class" : "crystal", 
+        "data-random" : random
     })
-    for (var i = 0; i < firstImage.length; i++) {
-        firstImage[i] 
 
+    
+   crystal.css({
+
+    "background-image":"url( '" + images[i] + "')", 
+    "background-size" : "cover"
+   })
+  
+    $(".crystals").append(crystal)
+
+}
+    
+}
+
+startGame()
+
+$(document).on("click", ".crystal", function () {
+    var num = ($(this).attr("data-random"))
+
+    $("#user-total-score").html(userNum)
+    num = parseInt(num)
+    userNum += num;
+
+    if (userNum > magicMum){
+        lost-- ;
+        $("#lose").html(lost)
+        startGame()
+        userNum = 0
     }
 
-
-
-
-
-$(function () {
-
-
-
-    $("#image1").mouseenter (function () {
-        $(this).fadeTo(500, .6)
-    })
-    $("#image1").mouseleave(function () {
-        $(this).fadeTo(500, 1)
-    })
-
-    $("#image2").mouseenter (function () {
-        $(this).fadeTo(500, .6)
-    })
-    $("#image2").mouseleave(function () {
-        $(this).fadeTo(500, 1)
-    })
-
-    $("#image3").mouseenter (function () {
-        $(this).fadeTo(500, .6)
-    })
-    $("#image3").mouseleave(function () {
-        $(this).fadeTo(500, 1)
-    })
-
-    $("#image4").mouseenter (function () {
-        $(this).fadeTo(500, .6)
-    })
-    $("#image4").mouseleave(function () {
-        $(this).fadeTo(500, 1)
-    })
-
-
-
-
-   
-
-});
-
-
-
-    $("#image1, #image2, #image3, #image4").on("click", function () {
-
-        for (i = 0; i < firstImage.length; i++) {
-            firstImage[i] = Math.floor(Math.random() * 11) + 1;
-
-            
-        }
-
-
-        if (firstImage) {
-
-
-            $("#user-total-score").text(firstImage[i] = Math.floor(Math.random() * 11) + 1 + i++)
-
-             var userNumber;
-             userNumber =  $(this)
-             userNumber = parseInt(userNumber)
-            counter += userNumber
-
-        }
-
-        if (counter === magicNumber) {
-
-            $("#win").text(win++)
-        }
-    
-        else if (counter >= magicNumber)  {
-            $("#lose").text(lose++)
-        }
-    
-   
-    });
-
-
-
-  
-
-
-
-
-      // win lose check 
-     
-
-
-
-
-
-
-
-   
-
-
-
-
-
+    else if (userNum === magicMum){
+        win++;
+        $("#win").html(win)
+        startGame()
+        userNum = 0
+    }
 })
+
+
+    
+
+
+
+
+
+
 
 
 
